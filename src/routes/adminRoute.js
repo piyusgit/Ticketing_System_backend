@@ -3,6 +3,7 @@ const User = require("../models/user");
 const { userAuth, roleAuthorization } = require("../middlewares/auth");
 const Ticket = require("../models/ticket");
 const Comment = require("../models/comment");
+const sendEmail = require("../utils/email");
 
 const router = express.Router();
 
