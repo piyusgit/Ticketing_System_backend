@@ -40,8 +40,8 @@ router.post("/register", async (req, res) => {
     // });
     res.cookie("userToken", token, {
       httpOnly: true,
-      secure: false, // true in production with HTTPS
-      sameSite: "lax",
+      secure: true, //false, // true in production with HTTPS
+      sameSite: "none", //"lax",
     });
     res.json({
       message: "User registered successfully",
